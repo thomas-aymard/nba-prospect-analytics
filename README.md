@@ -1,35 +1,34 @@
-# 🏀 NBA Rookie Performance & All-Star Predictor
+# 🏀 Prédicteur de Potentiel All-Star NBA
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine_Learning-orange.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Interactive_App-red.svg)
 
-## 📌 Overview
-This project is an End-to-End Machine Learning pipeline designed to predict whether an NBA rookie has the statistical profile to become a future All-Star. It bridges the gap between sports analytics and predictive modeling, allowing users to input rookie season metrics and receive a real-time probability score.
+## 📌 Présentation du projet
+L'objectif de cette application est de prédire si un jeune joueur de la NBA (Rookie) a le profil statistique pour devenir un futur "All-Star" au cours de sa carrière. 
 
-🌐 **[Try the Live Web App Here]** *(Link to your Streamlit Community Cloud URL once deployed)*
+Plutôt que de se limiter à la simple lecture d'un tableau de statistiques, j'ai voulu créer un outil interactif basé sur le Machine Learning. L'application analyse les performances d'un joueur lors de sa première année et calcule instantanément sa probabilité de réussite. Cela permet de mieux comprendre de manière concrète quels sont les facteurs qui déterminent le succès d'un rookie dans la ligue.
 
-## 🎯 Objectives
-- **Data Engineering:** Extract, clean, and preprocess historical NBA player statistics from 1980 to present.
-- **Machine Learning:** Train and optimize classification models (Random Forest, XGBoost) to identify complex non-linear patterns in player development.
-- **Deployment:** Build an interactive web application using Streamlit to make the ML model accessible to non-technical users (scouts, fans, analysts).
+🌐 **[Tester l'application en direct ici](https://nba-prospect-analytics-ncuqf6edufs4kms22xxhl3.streamlit.app/)**
 
-## 🛠️ Tech Stack
-- **Data Manipulation:** `Pandas`, `NumPy`
-- **Machine Learning:** `Scikit-Learn` (Random Forest Classifier, Hyperparameter tuning)
-- **Visualization:** `Matplotlib`, `Seaborn`
-- **Deployment:** `Streamlit`, `Joblib`
+## 🛠️ Outils et Technologies utilisés
+Pour construire ce projet de A à Z, je me suis appuyé sur l'écosystème Python orienté Data Science :
+- **Pandas et NumPy :** pour la manipulation, le nettoyage et la structuration des données statistiques historiques.
+- **Scikit-Learn :** pour la phase de Machine Learning, notamment la création et l'entraînement d'un modèle de classification de type *Random Forest*.
+- **Streamlit :** pour le développement de l'interface web interactive, permettant de rendre le modèle utilisable sans aucune ligne de commande.
+- **Matplotlib :** pour la génération des graphiques d'analyse.
 
-## 📊 Features & App Usage
-1. **Interactive Sliders:** Adjust key rookie metrics such as Points Per Game (PTS), Minutes (MIN), Rebounds (REB), and Field Goal Percentage (FG%).
-2. **Real-time Inference:** The model instantly calculates the probability of the player reaching All-Star status.
-3. **Feature Importance Visualization:** Understand the "Why" behind the model's decision with a breakdown of which statistical categories influenced the prediction the most.
+## 📊 Fonctionnalités de l'application
+1. **Saisie interactive :** L'utilisateur peut modifier manuellement les statistiques clés d'un joueur (Minutes jouées, Points, Rebonds, Passes, Contres, Efficacité au tir) à l'aide de curseurs.
+2. **Prédiction en temps réel :** Le modèle Random Forest calcule directement la probabilité (en pourcentage) que le joueur atteigne un statut majeur.
+3. **Explicabilité du modèle :** Au lieu de donner un simple chiffre, l'application génère un rapport écrit qui explique *pourquoi* le joueur a obtenu ce score, en listant ses points forts et les seuils statistiques à améliorer.
+4. **Poids des variables :** Un graphique montre de façon transparente quelles sont les statistiques que l'algorithme juge les plus importantes.
 
-*Example:* Testing the model with the rookie stats of players like Victor Wembanyama yields a high probability, accurately reflecting the model's capability to identify generational talent early on.
+## 🚀 Comment lancer le projet chez vous
 
-## 🚀 How to Run Locally
+Si vous souhaitez explorer le code et faire tourner l'application sur votre propre machine :
 
-1. Clone the repository:
+1. Clonez ce dépôt localement :
    ```bash
-   git clone [https://github.com/thomas-aymard/nba-rookie-predictor.git](https://github.com/thomas-aymard/nba-rookie-predictor.git)
-   cd nba-rookie-predictor
+   git clone [https://github.com/thomas-aymard/nba-prospect-analytics.git](https://github.com/thomas-aymard/nba-prospect-analytics.git)
+   cd nba-prospect-analytics
